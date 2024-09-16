@@ -30,16 +30,15 @@ function Promovideo() {
           </header>
         </div>
       ) : (
-        <div>
+        <div style={{ height: "100hv", overflow: "hidden" }}>
           <video
             autoplay
             muted
             playsinline
             controls={false} // Hides the progress bar and controls
-            style={{ width: "100%" }} // Adjust this as needed
+            style={{ width: "100%", height: "100vh", objectFit: "cover" }} // Ensures the video covers the screen
           >
             <source src={enigma_video} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
       )}
